@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <title>The world's tinest CMS using txti.es</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #eee;
+            max-width: 50em;
+            margin: auto;
+            padding: 1em;
+            line-height: 1.5;
+            font-size: 100%;
+        }
+        
+        img { 
+            max-width: 100%;
+            box-sizing: border-box;
+            display: block;
+            margin: .5em auto;
+            padding: .5em;
+            border: 1px solid #ccc;
+            background: #fff;
+        }
+        
+        h1 { color: green }
+        
+        a { 
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid green;
+        }
+        
+        a:hover { color: green; }
+    
+    </style>
+</head>
+<body>
+    <h1>The world's smallest CMS using txti.es</h1>
+    <hr>
+    <h2>This content comes from txti.es/barry</h2>
+    <div data-src="http://txti.es/barry/html">Javascript seems to be disabled. View this content at <a href="http://txti.es/barry/html">txti.es/barry/html</a></div>
+    
+    <hr>
+    <h2>This content comes from txti.es/geoff</h2>
+    <div data-src="http://txti.es/geoff/html">Javascript seems to be disabled. View this content at <a href="http://txti.es/geoff/html">txti.es/geoff/html</a></div>    
+    
+    <script>
+    //the TXTI CMS
+    (function(){
+        function putTxti(u, l){
+            var xhr= new XMLHttpRequest();
+            xhr.open('GET', u, true);
+            xhr.onreadystatechange = function() {
+                if (this.readyState < 4) {
+                    return;
+                }else if (this.readyState == 4){
+                    l.innerHTML = this.responseText;
+                }
+            };
+            xhr.send();
+        }
+        
+        var all = document.getElementsByTagName("*"),
+              i = 0;
+
+        while(i < all.length){
+            if(all[i].hasAttribute('data-src')){
+                   putTxti(all[i].getAttribute('data-src'), all[i]);
+            }
+            i++;
+        }   
+    })();
+    </script>
+</body>
+</html>
