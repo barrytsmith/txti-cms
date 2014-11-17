@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>The world's tinest CMS using txti.es</title>
+    <!-- these styles just included to show how you can style everything how you wish -->
     <style>
         body {
             font-family: sans-serif;
@@ -39,12 +40,15 @@
     <h1>The world's smallest CMS using txti.es</h1>
     <hr>
     <h2>This content comes from txti.es/barry</h2>
-    <div data-src="http://txti.es/barry/html">Javascript seems to be disabled. View this content at <a href="http://txti.es/barry/html">txti.es/barry/html</a></div>
+    <!-- include the data-src attribute pointing to the txti of your choice on any element -->
+    <div data-src="http://txti.es/barry/html">JavaScript seems to be disabled. View this content at <a href="http://txti.es/barry/html">txti.es/barry/html</a></div>
     
     <hr>
     <h2>This content comes from txti.es/geoff</h2>
-    <div data-src="http://txti.es/geoff/html">Javascript seems to be disabled. View this content at <a href="http://txti.es/geoff/html">txti.es/geoff/html</a></div>    
+    <!-- notice the helpful text inside the element in case JavaScript is disabled -->
+    <div data-src="http://txti.es/geoff/html">JavaScript seems to be disabled. View this content at <a href="http://txti.es/geoff/html">txti.es/geoff/html</a></div>    
     
+    <!-- paste this script right before the closing body tag -->
     <script>
     //the TXTI CMS
     (function(){
