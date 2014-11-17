@@ -1,6 +1,8 @@
 #Using txti.es to make the world's smallest CMS
 
-Turn any html page into a Markdown-driven CMS using [txti.es](http://txti.es) and just 25 lines of JavaScript.
+Turn any html page into a Markdown-driven CMS using [txti.es](http://txti.es) and just 25 lines of JavaScript. 
+
+[View a demo](http://barrytsmith.com/lab/txti-api.html).
 
 ##Step 1
 
